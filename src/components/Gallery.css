@@ -1,0 +1,13 @@
+.gallery{
+    display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+margin-top: 50px;
+}
+
+.gallery img{
+    width: 25%;
+    height: 400px;
+    object-fit: cover;
+}
