@@ -1,12 +1,17 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import './Gallery.css'
+import ImgContext from '../imgContext';
 
 const Gallery = () => {
-
+const { content } = useContext(ImgContext);
 
   return (
     <div className='gallery'>
-      <img src='' alt=''/>
+      {
+        content && content.map((item) =>
+        <img key={item.id} src={item.urls.regular} alt=''/>
+         )
+      }
     </div>
   )
 }
